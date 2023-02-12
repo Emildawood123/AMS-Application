@@ -55,7 +55,7 @@ function Main(){
             Object.keys(Compen).forEach((ele)=>{
                 let Random = Math.floor(Math.random()*cou)
                 let newCompen = Compen[ele].filter((Ele)=>{
-                    return Ele != Compen[ele][Random]
+                    return Ele !== Compen[ele][Random]
                 }) 
                 let member = document.createElement("li")
                 member.innerHTML = Compen[ele][Random].value 
