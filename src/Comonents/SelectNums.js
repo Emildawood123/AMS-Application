@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 function Select(){
-const [In1,setIn1] = useState("emil");
+const [In1,setIn1] = useState();
 const [In2,setIn2] = useState();
 return(
     <>
@@ -17,7 +17,7 @@ return(
             setIn2(e.target.value)
         }} type="number" />
         <br />
-        <Link className="link" to={In1+In2} onClick={(e)=>{
+        <Link className="link" to={In1+In2} onClick={()=>{
             console.log(In1)
             console.log(In2)
         }}>Submit</Link>
@@ -47,9 +47,10 @@ function Main(){
         Ps.forEach((e)=>{
             Object.assign(Compen,{[e.innerHTML]:Array.from(document.querySelectorAll(`.parent > div > div[data-id="${e.id}"] > input`))});
         })
+        console.log(Compen)
         let cou = inputs.length-1;
         Object.values(Compen)[0].forEach((e, index)=>{
-            let team = document.createElement("p")
+            let team = document.createElement("p");
             team.innerHTML = `Team ${index + 1}:`
             Parent.appendChild(team)
             Object.keys(Compen).forEach((ele)=>{
@@ -61,7 +62,7 @@ function Main(){
                 member.innerHTML = Compen[ele][Random].value 
                 Parent.append(member)
                 console.log(Compen[ele][Random].value)
-                if(Compen[ele].length > 1){
+                if(Compen[ele].length > 0){
                 Compen[ele] = newCompen
                 }
             })

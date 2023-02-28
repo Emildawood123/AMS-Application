@@ -1,3 +1,6 @@
+body {
+  background-color: rgb(159, 206, 159);
+}
 .button{
   background-color: rgb(105, 105, 246);
   padding: 25px 50px;
@@ -21,17 +24,30 @@
   text-decoration: none;}
   .link{
   background-color: red;
-  padding: 5px;
+  padding: 10px 15px;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   text-decoration: none;
-  position: absolute;
-  transform: translate(600px,-30px);
-  -webkit-transform: translate(600px,-30px);
-  -moz-transform: translate(600px,-30px);
-  -ms-transform: translate(600px,-30px);
-  -o-transform: translate(600px,-30px);
+  display: inline-block;
+  font-weight: 700;
+  font-size: 25px;
+  margin-left: 5px;
+}
+.parent div div input {
+  display: block;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+.parent div {
+  margin-right: 50px;
+}
+.parent div p {
+    font-size: 30px;
+    margin: 5px;
+    font-family: monospace;
+    text-transform: uppercase;
 }
