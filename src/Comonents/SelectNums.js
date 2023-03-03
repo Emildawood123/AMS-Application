@@ -54,7 +54,7 @@ function Main(){
             team.innerHTML = `Team ${index + 1}:`
             Parent.appendChild(team)
             Object.keys(Compen).forEach((ele)=>{
-                let Random = Math.floor(Math.random()*cou)
+                let Random = Math.round(Math.random()*cou)
                 let newCompen = Compen[ele].filter((Ele)=>{
                     return Ele !== Compen[ele][Random]
                 }) 
